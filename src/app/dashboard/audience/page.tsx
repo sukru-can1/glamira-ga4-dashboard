@@ -135,7 +135,7 @@ export default function AudiencePage() {
             <LineChart data={engagementData}>
               <XAxis dataKey="date" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 10 }} unit="%" />
-              <Tooltip formatter={(v: number) => `${v.toFixed(1)}%`} />
+              <Tooltip formatter={(v) => `${Number(v).toFixed(1)}%`} />
               <Line type="monotone" dataKey="rate" stroke="#8b5cf6" strokeWidth={2} dot={false} />
             </LineChart>
           </ResponsiveContainer>

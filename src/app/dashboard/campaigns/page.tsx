@@ -104,7 +104,7 @@ export default function CampaignsPage() {
               <BarChart data={topCampaigns} layout="vertical">
                 <XAxis type="number" tick={{ fontSize: 10 }} />
                 <YAxis dataKey="name" type="category" tick={{ fontSize: 10 }} width={150} />
-                <Tooltip formatter={(v: number) => fmtMoney(v)} />
+                <Tooltip formatter={(v) => fmtMoney(Number(v))} />
                 <Bar dataKey="revenue" fill="#2563eb" />
               </BarChart>
             </ResponsiveContainer>

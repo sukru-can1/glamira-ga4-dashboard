@@ -152,7 +152,7 @@ export default function EcommercePage() {
             <BarChart data={domainData} layout="vertical">
               <XAxis type="number" tick={{ fontSize: 10 }} />
               <YAxis dataKey="name" type="category" tick={{ fontSize: 10 }} width={180} />
-              <Tooltip formatter={(v: number) => fmtMoney(v)} />
+              <Tooltip formatter={(v) => fmtMoney(Number(v))} />
               <Bar dataKey="revenue" fill="#2563eb" />
             </BarChart>
           </ResponsiveContainer>
